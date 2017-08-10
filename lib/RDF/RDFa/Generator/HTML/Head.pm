@@ -133,16 +133,18 @@ sub nodes
 sub _get_stream
 {
 	my ($self, $model) = @_;
+	my $stream;
 	
-	my $data_context = undef;
-	if (defined $self->{'data_context'})
-	{
-		$data_context = ( $self->{'data_context'} =~ /^_:(.*)$/ ) ?
-			RDF::Trine::Node::Blank->new($1) :
-			RDF::Trine::Node::Resource->new($self->{'data_context'});
+	if ($model->isa('RDF::Trine::Model')) {
+		my $data_context = undef;
+		if (defined $self->{'data_context'}) {
+			$data_context = ( $self->{'data_context'} =~ /^_:(.*)$/ ) ?
+			  RDF::Trine::Node::Blank->new($1) :
+					RDF::Trine::Node::Resource->new($self->{'data_context'});
+		}
+		$stream = $model->get_statements(undef, undef, undef, $data_context);
 	}
-	
-	return $model->get_statements(undef, undef, undef, $data_context);
+	return $stream;
 }
 
 sub _process_subject
