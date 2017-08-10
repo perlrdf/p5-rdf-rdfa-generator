@@ -13,7 +13,7 @@ my $parser = Attean->get_parser('Turtle')->new();
 
 my $model = Attean::MutableQuadModel->new( store => $store  );
 
-my $iter = $parser->parse_iter_from_bytes('<http://example.org/foo> a <http://example.org/Bar> .');
+my $iter = $parser->parse_iter_from_bytes('<http://example.org/foo> a <http://example.org/Bar> ; <http://example.org/title> "Dahut"@fr ; <http://example.org/something> [ <http://example.org/else> "Foo" ; <http://example.org/pi> 3.14 ] .');
 
 while (my $triple = $iter->next) {
 	$model->add_quad($triple->as_quad(Attean::IRI->new('http://example.org/graph')));
