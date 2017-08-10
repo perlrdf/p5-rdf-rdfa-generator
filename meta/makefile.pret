@@ -6,6 +6,7 @@
 	readme_from       m`RDF::RDFa::Generator`;
 	test_requires     p`Test::More 0.61`;
 	requires          p`Data::Dumper`;
+	requires          p`Carp`;
 	requires          p`Icon::FamFamFam::Silk`;
 	requires          p`RDF::Trine 0.112`;
 	requires          p`RDF::Prefixes`;
