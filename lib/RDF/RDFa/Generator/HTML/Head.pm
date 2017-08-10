@@ -6,6 +6,7 @@ use strict;
 use Encode qw'encode_utf8';
 use RDF::Prefixes;
 use XML::LibXML qw':all';
+use Carp;
 
 our $VERSION = '0.103';
 
@@ -134,15 +135,24 @@ sub _get_stream
 {
 	my ($self, $model) = @_;
 	my $stream;
-	
+	my $data_context = undef;
+
 	if ($model->isa('RDF::Trine::Model')) {
-		my $data_context = undef;
 		if (defined $self->{'data_context'}) {
 			$data_context = ( $self->{'data_context'} =~ /^_:(.*)$/ ) ?
 			  RDF::Trine::Node::Blank->new($1) :
 					RDF::Trine::Node::Resource->new($self->{'data_context'});
 		}
 		$stream = $model->get_statements(undef, undef, undef, $data_context);
+	} elsif ($model->does('Attean::API::Model')) {
+		if (defined $self->{'data_context'}) {
+			$data_context = ( $self->{'data_context'} =~ /^_:(.*)$/ ) ?
+			  Attean::Blank->new($1) :
+					Attean::IRI->new($self->{'data_context'});
+		}
+		$stream = $model->get_quads(undef, undef, undef, $data_context);
+	} else {
+		croak "Unknown RDF model supplied";
 	}
 	return $stream;
 }
