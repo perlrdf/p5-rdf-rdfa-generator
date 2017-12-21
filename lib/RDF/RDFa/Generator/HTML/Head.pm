@@ -51,7 +51,7 @@ sub inject_document
 	$xc->registerNs('xhtml', 'http://www.w3.org/1999/xhtml');
 	my @sites = $xc->findnodes($proto->injection_site);
 	
-	die "No suitable place to inject this document." unless @sites;
+	croak "No suitable place to inject this document." unless @sites;
 	
 	$sites[0]->appendChild($_) foreach @nodes;
 	return $dom;
