@@ -69,7 +69,7 @@
 
 	] .
 
-`RDF-RDFa-Generator 0.191_02 cpan:KJETILK`
+`RDF-RDFa-Generator 0.192 cpan:KJETILK`
 	issued   2017-12-22 ;
 	changeset [
 	  item [ label "Support Attean."@en ; a dcs:Addition ] ;

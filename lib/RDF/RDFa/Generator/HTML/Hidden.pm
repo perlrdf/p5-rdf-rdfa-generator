@@ -7,7 +7,7 @@ use warnings;
 use RDF::Prefixes;
 use XML::LibXML qw':all';
 
-our $VERSION = '0.191_02';
+our $VERSION = '0.192';
 
 sub injection_site
 {

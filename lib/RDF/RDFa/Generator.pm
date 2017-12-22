@@ -10,7 +10,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.191_02';
+our $VERSION = '0.192';
 
 use RDF::RDFa::Generator::HTML::Head;
 use RDF::RDFa::Generator::HTML::Hidden;
