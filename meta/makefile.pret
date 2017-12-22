@@ -8,6 +8,7 @@
     :runtime-requirement    [ :on "Data::Dumper"^^:CpanId ];
     :runtime-requirement    [ :on "Icon::FamFamFam::Silk"^^:CpanId ];
     :runtime-requirement    [ :on "RDF::Trine 0.112"^^:CpanId ];
+    :runtime-requirement    [ :on "AtteanX::Compatibility::Trine"^^:CpanId ];
     :runtime-requirement    [ :on "RDF::Prefixes"^^:CpanId ];
     :runtime-requirement    [ :on "XML::LibXML 1.60"^^:CpanId ];
 .
