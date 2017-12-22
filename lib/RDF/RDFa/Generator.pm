@@ -1,6 +1,6 @@
 =head1 NAME
 
-RDF::RDFa::Generator - generate some data in RDFa
+RDF::RDFa::Generator - Generate data for RDFa serialization
 
 =cut
 
@@ -9,7 +9,7 @@ package RDF::RDFa::Generator;
 use 5.008;
 use strict;
 
-our $VERSION = '0.103';
+our $VERSION = '0.105_01';
 
 use RDF::RDFa::Generator::HTML::Head;
 use RDF::RDFa::Generator::HTML::Hidden;
@@ -196,7 +196,7 @@ __END__
 
 =head1 BUGS
 
-Please report any bugs to L<http://rt.cpan.org/>.
+Please report any bugs to L<https://github.com/kjetilk/p5-rdf-rdfa-generator/issues>.
 
 =head1 SEE ALSO
 
@@ -209,9 +209,11 @@ L<http://www.perlrdf.org/>.
 
 Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
+Kjetil Kjernsmo E<lt>kjetilk@cpan.orgE<gt>.
+
 =head1 COPYRIGHT AND LICENCE
 
-Copyright (C) 2010 by Toby Inkster
+Copyright (C) 2010 by Toby Inkster, 2017 Kjetil Kjernsmo
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8 or,
