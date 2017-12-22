@@ -9,7 +9,7 @@ use RDF::Prefixes;
 use XML::LibXML qw':all';
 use Carp;
 
-our $VERSION = '0.192';
+our $VERSION = '0.191_02';
 
 sub new
 {
