@@ -3,6 +3,7 @@ package RDF::RDFa::Generator::HTML::Pretty;
 use 5.008;
 use base qw'RDF::RDFa::Generator::HTML::Hidden';
 use strict;
+use warnings;
 use constant XHTML_NS => 'http://www.w3.org/1999/xhtml';
 use Encode qw'encode_utf8';
 use Icon::FamFamFam::Silk;

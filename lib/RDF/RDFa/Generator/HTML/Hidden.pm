@@ -3,6 +3,7 @@ package RDF::RDFa::Generator::HTML::Hidden;
 use 5.008;
 use base qw'RDF::RDFa::Generator::HTML::Head';
 use strict;
+use warnings;
 use RDF::Prefixes;
 use XML::LibXML qw':all';
 
