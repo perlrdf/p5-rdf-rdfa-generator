@@ -7,7 +7,7 @@ use Encode qw'encode_utf8';
 use RDF::Prefixes;
 use XML::LibXML qw':all';
 
-our $VERSION = '0.105_01';
+our $VERSION = '0.106';
 
 sub new
 {
