@@ -58,7 +58,7 @@
 		item [ label "Drop common::sense and parent.pm deps."@en ] ;
 	] .
 
-`RDF-RDFa-Generator 0.105_01 cpan:KJETILK`
+`RDF-RDFa-Generator 0.106 cpan:KJETILK`
 	issued   2017-12-22 ;
 	changeset [
 	  item [ label "Upgrade distribution build system to Dist::Inkt."@en ; a dcs:Packaging ] ;
@@ -69,7 +69,7 @@
 
 	] .
 
-`RDF-RDFa-Generator 0.191_01 cpan:KJETILK`
+`RDF-RDFa-Generator 0.192 cpan:KJETILK`
 	issued   2017-12-22 ;
 	changeset [
 	  item [ label "Support Attean."@en ; a dcs:Addition ] ;
