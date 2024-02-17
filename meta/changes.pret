@@ -96,7 +96,7 @@
         item [ label "Many minor improvements."@en ; a dcs:Change] ;
         ] .
 
-`RDF-RDFa-Generator 0.201_01 cpan:KJETILK`
+`RDF-RDFa-Generator 0.201_02 cpan:KJETILK`
     issued   2024-02-17 ;
     label "Minor updates and transition to Github Actions for CI."@en ;
     changeset [
