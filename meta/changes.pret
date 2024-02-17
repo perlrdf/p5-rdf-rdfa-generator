@@ -97,6 +97,11 @@
         ] .
 
 `RDF-RDFa-Generator 0.201_01 cpan:KJETILK`
-    issued   2018-03-08 ;
-    label "test."@en .
-    
+    issued   2024-02-17 ;
+    label "Minor updates and transition to Github Actions for CI."@en ;
+    changeset [
+	item [ label "Use Github actions for CI."@en ; a dcs:Addition ] ;
+	item [ label "Remove Travis for CI."@en ; a dcs:Removal ] ;	
+	item [ label "Improve documentation."@en ; a dcs:Change ] ;
+	item [ label "Some minor changes."@en ; a dcs:Changes ] ;
+] .
