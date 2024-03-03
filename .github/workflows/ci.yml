@@ -10,6 +10,10 @@ on:
   pull_request:
   create:
 
+env:
+  PKG_HOMEBREW_DEPS: >-
+    libxml2
+
 jobs:
   notify:
     runs-on: ubuntu-latest
@@ -53,7 +57,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        os: [macos-latest, windows-latest, ubuntu-latest]
         perl: ['5']
         include:
           - { os: 'ubuntu-latest', perl: "5.32" }
@@ -70,6 +74,14 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist
+
+      # Setup system package deps
+      - name: Setup system deps (homebrew)
+        if: runner.os == 'macOS'
+        run: |
+          brew install ${{ env.PKG_HOMEBREW_DEPS }}
+          # Need to add this because the libxml2 Homebrew formula is keg-only.
+          echo "$( brew --prefix libxml2 )/bin" >> $GITHUB_PATH
 
       - name: Set up perl
         uses: shogo82148/actions-setup-perl@v1
